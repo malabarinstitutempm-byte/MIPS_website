@@ -1,0 +1,229 @@
+.exam-portal-section {
+    background-color: var(--color-bg-white);
+    padding: 60px 0;
+}
+
+.exam-portal-card {
+    display: grid;
+    grid-template-columns: 1.3fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(0, 86, 179, 0.04), rgba(0, 137, 123, 0.07));
+    border: 1px solid rgba(0, 86, 179, 0.15);
+    border-radius: 24px;
+    padding: 48px;
+    box-shadow: 0 15px 35px rgba(0, 86, 179, 0.06);
+    position: relative;
+    overflow: hidden;
+}
+
+.exam-portal-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
+}
+
+.exam-portal-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 86, 179, 0.1);
+    color: var(--color-primary);
+    padding: 6px 16px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.exam-portal-title {
+    font-size: 2.2rem;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.exam-portal-description {
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.exam-portal-features {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.exam-feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: var(--color-text-main);
+    font-size: 0.95rem;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(0, 86, 179, 0.08);
+}
+
+.feature-icon {
+    color: var(--color-secondary);
+}
+
+.exam-portal-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.exam-portal-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 6px 20px rgba(0, 86, 179, 0.25);
+    border: none;
+}
+
+.exam-portal-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 86, 179, 0.35);
+    color: #fff;
+}
+
+.exam-portal-note {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+/* Visual Card Column */
+.exam-portal-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.portal-visual-inner {
+    width: 100%;
+    max-width: 360px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 86, 179, 0.12);
+    border-radius: 20px;
+    padding: 36px 24px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portal-visual-inner:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(0, 86, 179, 0.12);
+}
+
+.portal-badge-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 16px;
+    background: linear-gradient(135deg, rgba(0, 86, 179, 0.1), rgba(0, 137, 123, 0.15));
+    color: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portal-tag {
+    display: inline-block;
+    background: rgba(0, 137, 123, 0.1);
+    color: var(--color-secondary-dark);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.portal-visual-title {
+    font-size: 1.25rem;
+    color: var(--color-text-main);
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.portal-url-pill {
+    display: inline-block;
+    font-family: monospace;
+    font-size: 0.85rem;
+    background: #f1f5f9;
+    color: var(--color-primary);
+    padding: 6px 14px;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    border: 1px dashed rgba(0, 86, 179, 0.3);
+    word-break: break-all;
+}
+
+.portal-subtext {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .exam-portal-card {
+        grid-template-columns: 1fr;
+        padding: 36px 28px;
+        gap: 32px;
+    }
+
+    .portal-visual-inner {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .exam-portal-section {
+        padding: 40px 0;
+    }
+
+    .exam-portal-card {
+        padding: 28px 20px;
+    }
+
+    .exam-portal-title {
+        font-size: 1.75rem;
+    }
+
+    .exam-portal-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .exam-portal-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .exam-portal-note {
+        text-align: center;
+    }
+}

@@ -1,0 +1,26 @@
+.courses-section {
+    background-color: var(--color-bg-white);
+}
+
+.section-subtitle {
+    margin-top: 16px;
+    color: var(--color-text-muted);
+}
+
+.course-category-group {
+    margin-bottom: 60px;
+}
+
+.category-title {
+    font-size: 1.8rem;
+    color: var(--color-text-main);
+    margin-bottom: 30px;
+    padding-left: 16px;
+    border-left: 4px solid var(--color-secondary);
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}

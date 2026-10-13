@@ -1,0 +1,115 @@
+.enquiry-section {
+    background-color: #e3f2fd;
+    padding: 100px 0;
+}
+
+.enquiry-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.enquiry-content {
+    flex: 1;
+}
+
+.enquiry-title {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+}
+
+.enquiry-text {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    line-height: 1.8;
+}
+
+.enquiry-form {
+    flex: 1;
+    background-color: var(--color-bg-white);
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+.form-title {
+    font-size: 1.5rem;
+    color: var(--color-text-main);
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 16px;
+    color: var(--color-text-muted);
+    opacity: 0.7;
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+.form-group:focus-within .input-icon {
+    color: var(--color-primary);
+    opacity: 1;
+}
+
+.textarea-icon {
+    top: 16px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px 14px 48px;
+    /* Left padding for icon */
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f8fafc;
+    color: var(--color-text-main);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 86, 179, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #cbd5e1;
+}
+
+.w-full {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .enquiry-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .enquiry-content {
+        text-align: center;
+    }
+}

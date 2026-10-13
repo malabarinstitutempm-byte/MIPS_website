@@ -1,0 +1,164 @@
+.course-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.course-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 86, 179, 0.15);
+    border-color: rgba(0, 86, 179, 0.2);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Optional: Add a subtle gold accent line at the bottom */
+.course-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 4px;
+    background: var(--color-accent);
+    transition: width 0.4s ease;
+    z-index: 10;
+}
+
+.course-card:hover::after {
+    width: 100%;
+}
+
+.course-image-container {
+    position: relative;
+    height: 200px;
+    background-color: #eee;
+    overflow: hidden;
+}
+
+.course-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.course-card:hover .course-image {
+    transform: scale(1.05);
+}
+
+.course-image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--color-primary), var(--color-secondary));
+    opacity: 0.8;
+}
+
+.course-type-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: var(--color-primary-dark);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    z-index: 2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.course-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.course-title {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    color: var(--color-text-main);
+    font-weight: 600;
+    letter-spacing: -0.2px;
+}
+
+.course-meta {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.course-btn {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-top: 1px solid #eee;
+    color: var(--color-primary);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.course-btn:hover {
+    color: var(--color-primary-dark);
+}
+
+.course-badges-overlay {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 2;
+    align-items: flex-start;
+}
+
+.custom-badge {
+    background: rgba(0, 86, 179, 0.85);
+    /* Primary fallback */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.custom-badge-asap-ncvet {
+    background: linear-gradient(135deg, rgba(230, 81, 0, 0.95), rgba(255, 152, 0, 0.95));
+}
+
+.custom-badge-certificate {
+    background: linear-gradient(135deg, rgba(27, 94, 32, 0.95), rgba(76, 175, 80, 0.95));
+}
