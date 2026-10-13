@@ -5,6 +5,12 @@ import { Clock, Award, BookOpen, Briefcase, ChevronRight, CheckCircle2 } from 'l
 import Link from 'next/link';
 import './CourseDetail.css';
 
+export async function generateStaticParams() {
+    return coursesData
+        .flatMap(category => category.items)
+        .map(item => ({ slug: item.slug }));
+}
+
 export default async function CourseDetail({ params }) {
     const { slug } = await params;
 
